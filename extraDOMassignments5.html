@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>question 5</title>
+</head>
+
+<body>
+    <input type="radio" id="firstRadio" name="">Option1
+    <br>
+    <div id="btn2" style="height:25px; width: 100px;">
+        <input type="radio" id="secondRadio" name="">Option2
+    </div>
+    <br>
+    <input type="text" id="firstText" name="">
+    <input type="text" id="secondText" name="">
+    <br>
+    <button id="button">BUTTON</button>
+    <script type="text/javascript">
+    var _id = function _id(id) {
+        return document['getElementById'](id);
+    }
+
+    var button = _id('button');
+    var firstText = _id('firstText');
+    var secondText = _id('secondText');
+    var firstRadio = _id('firstRadio');
+    var secondRadio = _id('secondRadio');
+    var divBtn = _id('btn2');
+
+    button['addEventListener']('click', function() {
+
+        if (firstText.value) {
+            firstRadio.checked = true;
+        } else if (secondText.value) {
+            secondRadio.checked = true;
+            divBtn['style']['backgroundColor'] = "yellow";
+        } else {
+
+            alert("Please enter in only one text box");
+        }
+
+
+    });
+    </script>
+</body>
+
+</html>
